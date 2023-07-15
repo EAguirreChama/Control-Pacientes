@@ -8,6 +8,8 @@
 
 📍 En caso de perder el internet o cerrar la página por accidente, los datos no se pierden.
 
+📍 🐕 [Administrador de Pacientes](https://administrador-pacientes-vuejs.netlify.app/)
+
  <br /> 
  
 ## **📌 ¿Qué podrás encontrar?** 
