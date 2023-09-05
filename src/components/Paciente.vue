@@ -1,5 +1,4 @@
 <script setup>
-
     defineEmits(['actualizar-paciente' , 'eliminar-paciente'])
 
     defineProps({
@@ -8,7 +7,6 @@
             required: true
         }
     })
-
 </script>
 
 <template>
