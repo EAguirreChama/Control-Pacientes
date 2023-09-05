@@ -1,4 +1,5 @@
 <script setup>
+
     import { reactive, computed } from 'vue'
     import Alerta from './Alerta.vue'
 
@@ -41,7 +42,7 @@
             alerta.mensaje = 'Todos los campos son obligatorios'
             alerta.tipo = 'error'
             return 
-        }
+        };
 
         emit('guardar-paciente')
         if(props.id) {
@@ -57,7 +58,7 @@
                 mensaje: ''
             })
         }, 3000)
-    }
+    };
 
     const editando = computed(() => {
         return props.id
