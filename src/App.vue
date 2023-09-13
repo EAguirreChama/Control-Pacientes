@@ -37,11 +37,11 @@
   const actualizarPaciente = (id) => {
       const pacienteEditar = pacientes.value.filter(paciente => paciente.id === id)[0]
       Object.assign(paciente, pacienteEditar)
-  }
+  };
 
   const eliminarPaciente = (id) => {
       pacientes.value = pacientes.value.filter(paciente => paciente.id !== id)
-  }
+  };
 
   const guardarPaciente = () => {
     if(paciente.id) {
@@ -53,7 +53,7 @@
         ...paciente,
         id: uid()
       })
-    }
+    };
 
     // Reiniciar Form
     paciente.nombre = ''
@@ -62,8 +62,7 @@
     paciente.alta = ''
     paciente.sintomas = '',
     paciente.id = null
-  }
-
+  };
 </script>
 
 <template>
@@ -89,6 +88,7 @@
               Información de
               <span class="text-indigo-600 font-bold">Pacientes</span>
           </p>
+          
           <Paciente
             v-for="paciente in pacientes"
             :key="paciente.id"
@@ -97,8 +97,8 @@
             @eliminar-paciente="eliminarPaciente"
           />
         </div>
+        
         <p v-else class="mt-20 text-2xl text-center">No hay Pacientes Registrados</p>
-
       </div>
 
     </div>
