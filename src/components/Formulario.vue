@@ -1,3 +1,4 @@
+<!-- Componente formulario -->
 <script setup>
     import { reactive, computed } from 'vue'
     import Alerta from './Alerta.vue'
@@ -66,8 +67,10 @@
 
 <template>
     <div class="md:w-1/2">
+        <!-- Titulo -->
         <h2 class="font-black text-3xl text-center">Seguimiento Pacientes</h2>
 
+        <!-- Parrafo -->
         <p class="text-lg mt-5 text-center mb-10">
             Añade Pacientes y
             <span class="text-indigo-600 font-bold">Adminístralos</span>
