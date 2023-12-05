@@ -81,6 +81,7 @@
 
         <!-- Formulario -->
         <form class="bg-white shadow-md rounded-lg py-10 px-5 mb-10" @submit.prevent="validar">
+            <!-- Nombre Mascota -->
             <div class="mb-5">
                 <label for="mascota" class="block text-gray-700 uppercase font-bold">
                     Nombre Mascota
@@ -96,6 +97,7 @@
                 >
             </div>
 
+            <!-- Nombre Propietario -->
             <div class="mb-5">
                 <label for="propietario" class="block text-gray-700 uppercase font-bold">
                     Nombre Propietario
@@ -111,6 +113,7 @@
                 >
             </div>
 
+            <!-- Correo Electronico -->
             <div class="mb-5">
                 <label for="email" class="block text-gray-700 uppercase font-bold">
                     Correo Electronico
@@ -126,6 +129,7 @@
                 >
             </div>
 
+            <!-- Alta -->
             <div class="mb-5">
                 <label for="alta" class="block text-gray-700 uppercase font-bold">
                     Alta
@@ -140,6 +144,7 @@
                 >
             </div>
 
+            <!-- Síntomas -->
             <div class="mb-5">
                 <label for="sintomas" class="block text-gray-700 uppercase font-bold">
                     Síntomas
@@ -154,9 +159,10 @@
                 />
             </div>
 
+            <!-- Botón -->
             <input 
                 type="submit"
-                class="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors " 
+                class="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors" 
                 :value="[editando ? 'Guardar Cambios' : 'Registrar Paciente']"   
             />
         </form>
