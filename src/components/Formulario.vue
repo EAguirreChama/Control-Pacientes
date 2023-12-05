@@ -1,5 +1,4 @@
 <script setup>
-
     import { reactive, computed } from 'vue'
     import Alerta from './Alerta.vue'
 
@@ -63,7 +62,6 @@
     const editando = computed(() => {
         return props.id
     })
-
 </script>
 
 <template>
@@ -75,15 +73,9 @@
             <span class="text-indigo-600 font-bold">Adminístralos</span>
         </p>
 
-        <Alerta
-            v-if="alerta.mensaje"
-            :alerta="alerta"
-        />
+        <Alerta v-if="alerta.mensaje" :alerta="alerta"/>
 
-        <form 
-            class="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
-            @submit.prevent="validar"
-        >
+        <form class="bg-white shadow-md rounded-lg py-10 px-5 mb-10" @submit.prevent="validar">
             <div class="mb-5">
                 <label for="mascota" class="block text-gray-700 uppercase font-bold">
                     Nombre Mascota
@@ -162,7 +154,6 @@
                 class="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-colors " 
                 :value="[editando ? 'Guardar Cambios' : 'Registrar Paciente']"   
             />
-
         </form>
     </div>
 </template>
