@@ -2,6 +2,7 @@
   import { ref, reactive, watch, onMounted} from 'vue';
   import { uid } from 'uid'
   
+  // Renderizamos componentes
   import Header from './components/Header.vue';
   import Formulario from './components/Formulario.vue'
   import Paciente from './components/Paciente.vue'
