@@ -7,8 +7,10 @@
   import Formulario from './components/Formulario.vue'
   import Paciente from './components/Paciente.vue'
 
+  // Listado de pacientes
   const pacientes = ref([])
 
+  // State de pacientes
   const paciente = reactive({
         id: null,
         nombre: '',
@@ -71,6 +73,7 @@
     <Header/>
 
     <div class="mt-12 md:flex">
+      <!-- Lado del formulario -->
       <Formulario
         v-model:nombre="paciente.nombre"
         v-model:propietario="paciente.propietario"
@@ -81,9 +84,11 @@
         :id="paciente.id"
       />
 
+      <!-- Lado de pacientes -->
       <div class="md:w-1/2 md:h-screen overflow-scroll">
         <h3 class="font-black text-3xl text-center">Administra tus Pacientes</h3>
 
+        <!-- Verifica si hay pacientes -->
         <div v-if="pacientes.length > 0">
           <p class="text-lg mt-5 text-center mb-10">
               Información de
@@ -101,7 +106,6 @@
         
         <p v-else class="mt-20 text-2xl text-center">No hay Pacientes Registrados</p>
       </div>
-
     </div>
   </div>
 </template>

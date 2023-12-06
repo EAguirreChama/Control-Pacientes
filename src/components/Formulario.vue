@@ -9,17 +9,6 @@
         mensaje: ''
     })
 
-    // Utilizando Reactive para la creación de un paciente
-    // const paciente = reactive ({
-    //     nombre: '',
-    //     propietario: '',
-    //     email: '',
-    //     alta: '',
-    //     sintomas: ''
-    // })
-    // Para acceder a los datos
-    // {{ paciente.nombre }}
-
     const emit = defineEmits(['update:nombre', 'update:propietario', 'update:email', 'update:alta', 'update:sintomas', 'guardar-paciente'])
 
     const props = defineProps({
