@@ -49,6 +49,7 @@
         }
     })
 
+    // Función para validar al momento del submit
     const validar = () => {
         if(Object.values(props).includes('')){
             alerta.mensaje = 'Todos los campos son obligatorios'
@@ -93,6 +94,7 @@
 
         <!-- Formulario -->
         <form class="bg-white shadow-md rounded-lg py-10 px-5 mb-10" @submit.prevent="validar">
+            
             <!-- Nombre Mascota -->
             <div class="mb-5">
                 <label for="mascota" class="block text-gray-700 uppercase font-bold">
