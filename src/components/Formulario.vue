@@ -3,6 +3,18 @@
     import { reactive, computed } from 'vue'
     import Alerta from './Alerta.vue'
 
+    // Utilizando Reactive para la creación de un paciente
+    // const paciente = reactive ({
+    //     nombre: '',
+    //     propietario: '',
+    //     email: '',
+    //     alta: '',
+    //     sintomas: ''
+    // })
+
+    // Para acceder a los datos
+    // {{ paciente.nombre }}
+
     const alerta = reactive ({
         tipo: '',
         mensaje: ''
@@ -95,6 +107,7 @@
                     :value="nombre"
                     @input="$emit('update:nombre', $event.target.value)"
                 >
+                <!-- v-model="paciente.nombre" -->
             </div>
 
             <!-- Nombre Propietario -->
