@@ -2,6 +2,12 @@
 <script setup>
     import { reactive, computed } from 'vue'
     import Alerta from './Alerta.vue'
+    
+    // State de Alerta
+    const alerta = reactive ({
+        tipo: '',
+        mensaje: ''
+    })
 
     // Utilizando Reactive para la creación de un paciente
     // const paciente = reactive ({
@@ -13,12 +19,6 @@
     // })
     // Para acceder a los datos
     // {{ paciente.nombre }}
-
-
-    const alerta = reactive ({
-        tipo: '',
-        mensaje: ''
-    })
 
     const emit = defineEmits(['update:nombre', 'update:propietario', 'update:email', 'update:alta', 'update:sintomas', 'guardar-paciente'])
 
@@ -56,6 +56,7 @@
         // En este caso es props
         // Con el metodo includes se verifica que no este vacío
         if(Object.values(props).includes('')){
+            // Modificando el state de alerta
             alerta.mensaje = 'Todos los campos son obligatorios'
             alerta.tipo = 'error'
             return 
