@@ -1,6 +1,7 @@
 <!-- Componente Alerta -->
 <script setup>
     import { computed } from 'vue';
+
     const props = defineProps({
         alerta: {
             type: Object,
@@ -11,6 +12,7 @@
     const isError = computed(() => {
         return  props.alerta.tipo === 'error'
     })
+    
 </script>
 
 <template>

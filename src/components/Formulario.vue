@@ -94,7 +94,7 @@
             <span class="text-indigo-600 font-bold">Adminístralos</span>
         </p>
 
-        <!-- Alerta de mensaje -->
+        <!-- Componente de Alerta -->
         <Alerta v-if="alerta.mensaje" :alerta="alerta"/>
 
         <!-- Formulario -->
