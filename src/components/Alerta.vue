@@ -9,11 +9,17 @@
         }
     })
 
+    // Función para verificar el error
     const isError = computed(() => {
         return  props.alerta.tipo === 'error'
     })
-    
+
+    // El computed comunica el script con el template
+
 </script>
+
+<!-- Cuando tiene los 2 puntos se vuelve una clase dinamica -->
+<!-- Cuando no tiene los 2 puntos significa que esa clase es estatico -->
 
 <template>
     <div 
