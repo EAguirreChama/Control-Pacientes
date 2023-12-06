@@ -11,9 +11,9 @@
     //     alta: '',
     //     sintomas: ''
     // })
-
     // Para acceder a los datos
     // {{ paciente.nombre }}
+
 
     const alerta = reactive ({
         tipo: '',
@@ -51,6 +51,10 @@
 
     // Función para validar al momento del submit
     const validar = () => {
+        // Aquí se validan que los input no esten vacíos
+        // Object.values quiere decir que esta verificando los valores del objeto que se le pasa
+        // En este caso es props
+        // Con el metodo includes se verifica que no este vacío
         if(Object.values(props).includes('')){
             alerta.mensaje = 'Todos los campos son obligatorios'
             alerta.tipo = 'error'
