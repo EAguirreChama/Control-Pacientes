@@ -2,7 +2,7 @@
   import { ref, reactive, watch, onMounted} from 'vue';
   import { uid } from 'uid'
   
-  // Renderizamos componentes
+  // Importamos componentes
   import Header from './components/Header.vue';
   import Formulario from './components/Formulario.vue'
   import Paciente from './components/Paciente.vue'
@@ -46,9 +46,10 @@
       pacientes.value = pacientes.value.filter(paciente => paciente.id !== id)
   };
 
+  // Función para guardar paciente
   const guardarPaciente = () => {
     if(paciente.id) {
-      const { id } = paciente
+      const { id } = paciente
       const i = pacientes.value.findIndex(paciente => paciente.id === id )
       pacientes.value[i] = {...paciente}
     } else {
@@ -65,6 +66,15 @@
     paciente.alta = ''
     paciente.sintomas = '',
     paciente.id = null
+
+    // Otra forma de reiniciar el form
+    // Object.assign(paciente, {
+    //     nombre: '',
+    //     propietario: '',
+    //     email: '',
+    //     alta: '',
+    //     sintomas: ''
+    // })
   };
 </script>
 

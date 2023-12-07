@@ -1,3 +1,4 @@
+<!-- Componente para mostrar los pacientes -->
 <script setup>
     defineEmits(['actualizar-paciente' , 'eliminar-paciente'])
 
