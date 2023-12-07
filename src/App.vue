@@ -21,7 +21,8 @@
         alta: '',
         sintomas: ''
     })
-
+    
+  // Para que sea más facil de utilizar una función
   watch(pacientes, () => {
     guardarLocalStorage()
   }, {
@@ -45,6 +46,7 @@
       Object.assign(paciente, pacienteEditar)
   };
 
+  // Función para eliminar un paciente
   const eliminarPaciente = (id) => {
       pacientes.value = pacientes.value.filter(paciente => paciente.id !== id)
   };
