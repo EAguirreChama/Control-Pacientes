@@ -1,5 +1,7 @@
 <script setup>
   import { ref, reactive, watch, onMounted} from 'vue';
+  
+  // Paquete para generar ids únicos
   import { uid } from 'uid'
   
   // Importamos componentes
@@ -55,6 +57,7 @@
     } else {
       pacientes.value.push({
         ...paciente,
+        // Aqui se genera el id único
         id: uid()
       })
     };
