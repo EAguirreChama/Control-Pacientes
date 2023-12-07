@@ -53,6 +53,7 @@
   const guardarPaciente = () => {
     if(paciente.id) {
       const { id } = paciente
+      // findIndex solo funciona para arreglos
       const i = pacientes.value.findIndex(paciente => paciente.id === id )
       pacientes.value[i] = {...paciente}
     } else {
