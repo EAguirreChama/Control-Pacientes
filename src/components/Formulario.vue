@@ -15,6 +15,7 @@
     // Definiendo Props
     const props = defineProps({
         id: {
+            // Aqui se coloca que el Id puede ser un String o null
             type: [String, null],
             required: true
         },
